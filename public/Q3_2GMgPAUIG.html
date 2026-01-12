@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2nd Graded">
+    <meta name="keywords" content="2nd, Graded, HTML">
+    <meta name="author" content="Lala Pauig">
+    
+    <title>Home!</title>
+    <link rel="stylesheet" href="./css files/stylesheet.css">
+</head>
+
+<style>
+.maincontainer{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    background-color:cornflowerblue;
+    border-style: dotted;
+    border-color: crimson;
+    color: white;
+
+}
+    </style>
+
+<body style="background-color: lemonchiffon;">
+    <h1>3rd Quarter 2nd Graded: Sample Form by Lala Pauig</h1>
+    <div class="maincontainer">
+        <h1 style="color: antiquewhite;">Sign-Up Page</h1>
+        <form id="form" action="registered.html" method="get">
+            <fieldset>
+                <legend>User's Credentials</legend>
+                
+                <label>Student ID:
+                    <input type="number" name="idstud" required />
+                </label><br/><br/>
+
+                <label>Full name:
+                    <input type="text" name="fullname" required />
+                </label><br/><br/>
+
+                <label>Birthday:
+                    <input type="date" name="birthday" required />
+                </label><br/><br/>
+
+                <label>Email Address:
+                    <input type="email" name="address" required />
+                </label><br/><br/>
+
+                <label>Mobile Phone:
+                    <input type="text" name="Phone" required />
+                </label><br/><br/>
+
+                <label>Grade Level:
+                    <select name="level" id="level">
+                        <option value="7">Grade 7</option>
+                        <option value="8">Grade 8</option>
+                        <option value="9">Grade 9</option>
+                        <option value="10">Grade 10</option>
+                        <option value="11">Grade 11</option>
+                        <option value="12">Grade 12</option>
+                    </select>
+                </label><br/><br/>
+
+                <label>Intern or Extern?:
+                    <input type="radio" id="intern" name="intern" value="Intern">
+                    <label for="intern">Intern</label><br>
+
+                    <input type="radio" id="extern" name="extern" value="extern">
+                    <label for="html">Extern</label><br>
+                </label><br/><br/>
+
+                <label>Preferred Organization/Club:
+                    <select name="club" id="club">
+                        <option value="Munhwa">Munhwa</option>
+                        <option value="Sightlines">Sightlines</option>
+                        <option value="Alianti">Alianti</option>
+                        <option value="Kamalayan">Grade 10</option>
+                        <option value="Intyale">Grade 11</option>
+                        <option value="Animo">Grade 12</option>
+                    </select>
+                </label><br/><br/>
+
+                <label>Why do you want to join?:</label>
+                <textarea id="why" name="why">
+                    
+                </textarea><br/><br/>
+
+
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Action Buttons</legend>
+
+                <button type="button">Accept</button>
+                <button type="button">Clear</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
