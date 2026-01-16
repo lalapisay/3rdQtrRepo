@@ -30,3 +30,13 @@ form.addEventListener("reset", function(e) {
         e.preventDefault();
     }
 });
+
+function changeKulay(art){
+    console.log(art);
+    art.style.backgroundColor = "red"
+}
+
+function resetKulay(art){
+    console.log(art);
+    art.style.backgroundColor = "white"
+}

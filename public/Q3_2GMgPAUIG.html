@@ -37,11 +37,11 @@
                 <legend>User's Credentials</legend>
                 
                 <label>Student ID:
-                    <input type="number" name="idstud" required />
+                    <input type="number" name="idstud" onfocus="changeKulay(this)" onblur="resetKulay(this)" required />
                 </label><br/><br/>
 
                 <label>Full name:
-                    <input type="text" name="fullname" required />
+                    <input type="text" name="fullname"  onfocus="changeKulay(this)" onblur="resetKulay(this)" required />
                 </label><br/><br/>
 
                 <label>Birthday:
@@ -49,11 +49,11 @@
                 </label><br/><br/>
 
                 <label>Email Address:
-                    <input type="email" name="address" required />
+                    <input type="email" name="address" onfocus="changeKulay(this)" onblur="resetKulay(this)" required />
                 </label><br/><br/>
 
                 <label>Mobile Phone:
-                    <input type="text" name="Phone" required />
+                    <input type="text" name="Phone" onfocus="changeKulay(this)" onblur="resetKulay(this)" required />
                 </label><br/><br/>
 
                 <label>Grade Level:
@@ -69,10 +69,10 @@
                 </label><br/><br/>
 
                 <label>Intern or Extern?:
-                    <input type="radio" id="intern" name="intern" value="Intern">
+                    <input type="radio" id="intern" name="intext" value="Intern">
                     <label for="intern">Intern</label><br>
 
-                    <input type="radio" id="extern" name="extern" value="extern">
+                    <input type="radio" id="extern" name="intext" value="extern">
                     <label for="html">Extern</label><br>
                 </label><br/><br/>
 
@@ -82,9 +82,9 @@
                         <option value="Munhwa">Munhwa</option>
                         <option value="Sightlines">Sightlines</option>
                         <option value="Alianti">Alianti</option>
-                        <option value="Kamalayan">Grade 10</option>
-                        <option value="Intyale">Grade 11</option>
-                        <option value="Animo">Grade 12</option>
+                        <option value="Kamalayan">Kamalayan</option>
+                        <option value="Intyale">Intyale</option>
+                        <option value="Animo">Animo</option>
                     </select>
                 </label><br/><br/>
 
@@ -100,8 +100,8 @@
             <fieldset>
                 <legend>Action Buttons</legend>
 
-                <button type="button">Accept</button>
-                <button type="button">Clear</button>
+                <button type="submit">Accept</button>
+                <button type="reset">Clear</button>
             </fieldset>
         </form>
     </div>
