@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2nd Graded">
+    <meta name="keywords" content="2nd, Graded, HTML">
+    <meta name="author" content="Lala Pauig">
+    
+    <title>3rd Graded Q3</title>
+    <script src="./2ndgraded.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Show List of Students Who Signed Up</h1>
+    <h3>by Leonella Agnelly Pauig, 9-Mg</h3>
+</body>
+
+<script>
+const key = 'info';
+
+function loadInfo(){
+    const raw = localStorage.getItem(key);
+    
+    if(raw){
+        return JSON.parse(raw);
+    }
+    else{
+        return[];
+    }
+}
+
+function displayInfo(){
+    const info = loadInfo();
+    const list = document.getElementById('list');
+
+    if(info.length == 0){
+        list.innerHTML = '<li><p>No students have signed up yet.</p></li>';
+        return;
+    }
+    let output = "";
+    for(let i = 0; i < info.length; i++){
+        const student = info[i];
+        /* output += `<tr>
+            <td>${student.idstud}</td>
+            <td>${student.fullname}</td>
+            <td>${student.birthday}</td>
+            <td>${student.address}</td>
+            <td>${student.Phone}</td>
+            <td>${student.level}</td> 
+        </tr>`; */
+    }
+}
+
+
+</script>
