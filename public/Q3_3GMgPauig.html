@@ -8,17 +8,49 @@
     <meta name="author" content="Lala Pauig">
     
     <title>3rd Graded Q3</title>
-    <script src="./2ndgraded.js"></script>
+    <script src="./2ndgraded.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
+
+<style>
+.maincontainer{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    background-color:cornflowerblue;
+    border-style: dotted;
+    border-color: crimson;
+    color: white;}
+</style>
 
 <body>
     <h1>Show List of Students Who Signed Up</h1>
     <h3>by Leonella Agnelly Pauig, 9-Mg</h3>
+    <a href="Q3_2GMgPAUIG.html">Back to Sign Up Page</a>
+    <div class="maincontainer">
+        <table>
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Full Name</th>
+                    <th>Email Address</th>
+                    <th>Mobile Phone</th>
+                    <th>Grade Level</th>
+                    <th>Externals/Internals</th>
+                </tr>
+            </thead>
+            <tbody id="list">
+                
+            </tbody>
+        </table>
+
 </body>
 
 <script>
-const key = 'info';
+const key = 'students';
 
 function loadInfo(){
     const raw = localStorage.getItem(key);
@@ -42,16 +74,20 @@ function displayInfo(){
     let output = "";
     for(let i = 0; i < info.length; i++){
         const student = info[i];
-        /* output += `<tr>
-            <td>${student.idstud}</td>
-            <td>${student.fullname}</td>
-            <td>${student.birthday}</td>
-            <td>${student.address}</td>
-            <td>${student.Phone}</td>
+         output += `<tr>
+            <td>${student.club}</td>
+            <td>${student.id}</td>
+            <td>${student.name}</td>
+            <td>${student.email}</td>
+            <td>${student.number}</td>
             <td>${student.level}</td> 
-        </tr>`; */
+            <td>${student.exintern}</td> 
+        </tr>`; 
     }
+    list.innerHTML = output;
 }
+
+displayInfo();
 
 
 </script>

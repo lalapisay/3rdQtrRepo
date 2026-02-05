@@ -6,9 +6,8 @@
     <meta name="description" content="2nd Graded">
     <meta name="keywords" content="2nd, Graded, HTML">
     <meta name="author" content="Lala Pauig">
-    
     <title>2nd Graded Q3</title>
-    <script src="./2ndgraded.js"></script>
+    <script src="./2ndgraded.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -32,16 +31,17 @@
     <h1>3rd Quarter 2nd Graded: Sample Form by Lala Pauig</h1>
     <div class="maincontainer">
         <h1 style="color: antiquewhite;">Sign-Up Page</h1>
-        <form id="form" action="registered.html" method="get">
+        <a href = "Q3_3GMgPAUIG.html">Go to Sign Up display page </a>
+        <form id="form" action="Q3_3GMgPauig.html" method="get">
             <fieldset>
                 <legend>User's Credentials</legend>
                 
                 <label>Student ID:
-                    <input type="number" name="idstud" onfocus="changeKulay(this)" onblur="resetKulay(this)" required />
+                    <input type="number" name="idstud" id= "idstud" changeKulay(this) onblur="resetKulay(this)" required />
                 </label><br/><br/>
 
                 <label>Full name:
-                    <input type="text" name="fullname"  onfocus="changeKulay(this)" onblur="resetKulay(this)" required />
+                    <input type="text" name="fullname" id= "fullname" onfocus="changeKulay(this)" onblur="resetKulay(this)" required />
                 </label><br/><br/>
 
                 <label>Birthday:
@@ -49,11 +49,11 @@
                 </label><br/><br/>
 
                 <label>Email Address:
-                    <input type="email" name="address" onfocus="changeKulay(this)" onblur="resetKulay(this)" required />
+                    <input type="email" name="address" id= "address" onfocus="changeKulay(this)" onblur="resetKulay(this)" required />
                 </label><br/><br/>
 
                 <label>Mobile Phone:
-                    <input type="text" name="Phone" onfocus="changeKulay(this)" onblur="resetKulay(this)" required />
+                    <input type="text" name="Phone" id= "phone" onfocus="changeKulay(this)" onblur="resetKulay(this)" required />
                 </label><br/><br/>
 
                 <label>Grade Level:
@@ -100,7 +100,7 @@
             <fieldset>
                 <legend>Action Buttons</legend>
 
-                <button type="submit">Accept</button>
+                <button type="submit">Submit</button>
                 <button type="reset">Clear</button>
             </fieldset>
         </form>
