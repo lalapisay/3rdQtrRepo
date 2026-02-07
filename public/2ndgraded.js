@@ -40,11 +40,11 @@ form.addEventListener("reset", function(e) {
         e.preventDefault();
     }
 });*/
-alert("JS IS RUNNING AND ALIVE");
 
+//since there were problems with my code I added this just to see if it does something
 const form = document.getElementById("form");
 console.log(form);
-
+//get the elements from the form for the 3rd graded
 if (form) {
   const clubInput = document.getElementById("club");
   const idstudInput = document.getElementById("idstud");
@@ -52,7 +52,7 @@ if (form) {
   const levelInput = document.getElementById("level");
   const phoneInput = document.getElementById("phone");
   const addressInput = document.getElementById("address");
-
+  // for submitting!!
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -60,7 +60,7 @@ if (form) {
 
     const intext = document.querySelector('input[name="intext"]:checked');
     const exinternValue = intext ? intext.value : "";
-
+    //for the 3rd graded
     const student = {
       club: clubInput.value,
       id: idstudInput.value,
@@ -70,7 +70,7 @@ if (form) {
       number: phoneInput.value,
       exintern: exinternValue
     };
-
+    //local storage save
     let students = JSON.parse(localStorage.getItem("students")) || [];
     students.push(student);
 
@@ -84,7 +84,7 @@ if (form) {
     }
   });
 } else {
-  console.log('No form on this page; skipping form event listeners.');
+  console.log('No form on this page');
 }
 
 /*const clubInput = document.getElementById("club");
@@ -100,7 +100,7 @@ const idstudInput = document.getElementById("idstud");
 const fullnameInput = document.getElementById("fullname");
 const levelInput = document.getElementById("level");
 const phoneInput = document.getElementById("phone");
-/* (old submit/reset handlers replaced by guarded handlers above) */
+//for color in the boxes
     console.log(art);
     art.style.backgroundColor = "red"
 

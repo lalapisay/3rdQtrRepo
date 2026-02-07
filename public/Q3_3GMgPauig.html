@@ -26,7 +26,7 @@
     color: white;}
 </style>
 
-<body>
+<body style="background-color: lemonchiffon;">
     <h1>Show List of Students Who Signed Up</h1>
     <h3>by Leonella Agnelly Pauig, 9-Mg</h3>
     <a href="Q3_2GMgPAUIG.html">Back to Sign Up Page</a>
@@ -54,7 +54,7 @@ const key = 'students';
 
 function loadInfo(){
     const raw = localStorage.getItem(key);
-    
+    //to check if raw is not null or undefined. From sir Roy's code!!
     if(raw){
         return JSON.parse(raw);
     }
@@ -66,11 +66,12 @@ function loadInfo(){
 function displayInfo(){
     const info = loadInfo();
     const list = document.getElementById('list');
-
+    //no info inputted yet into the form
     if(info.length == 0){
         list.innerHTML = '<li><p>No students have signed up yet.</p></li>';
         return;
     }
+    //To input the info from the form to the table
     let output = "";
     for(let i = 0; i < info.length; i++){
         const student = info[i];
